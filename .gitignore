@@ -1,0 +1,32 @@
+# Created by https://www.gitignore.io/api/ommonlisp,elisp,node,python,bower
+
+
+## Web2py ##
+/errors/*
+/sessions/*
+/databases/*
+/uploads/*
+
+### Elisp ###
+# Compiled
+*.elc
+/contrib
+\#*
+.\#
+.#
+
+*~
+*.*~
+/elpa
+.emacs.d*
+SessionDesktop.el
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
