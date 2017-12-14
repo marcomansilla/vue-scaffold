@@ -6,7 +6,7 @@ This is a small example of integration between VueJS and Web2py.
 
 It includes:
 
-- VueJS_
+- vue.js_
 - Axios_
 - APIMaker_
   
