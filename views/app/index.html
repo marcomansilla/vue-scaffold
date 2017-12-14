@@ -1,0 +1,40 @@
+{{extend 'layout.html'}}
+
+<div class="container" id="app">
+    <h2>Web2Py - VueJS scaffold minimal demo app</h2>
+    <hr/>
+    
+    <div class="well row">
+	<div id="searchbox">
+	    <input  @keyup="query" placeholder="Search..." class="form-control" type="search" v-model="search" autofocus/>
+	    <button @click="listAll" class="btn btn-primary btn-lg"><i class="fa fa-list"></i> List all</button>
+	    <button class="btn btn-primary btn-lg"><i class="fa fa-plus"> </i> Add record</button>
+	</div>
+	<div id="resultbox">
+	    <table class="table table-hover ">
+		<thead>
+		    <tr>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Body</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		    </tr>
+		</thead>
+		<tbody>
+		    <tr v-for="record in result">
+			<td>${record.id}</td>
+			<td>${record.title}</td>
+			<td>${record.body}</td>
+			<td><button class="btn btn-primary"><i class="fa fa-pencil"></i></button></td>
+			<td><button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>			
+		    </tr>
+		</tbody>
+	    </table>
+	</div>
+    </div>
+</div>
+
+{{block page_js}}
+<script src="{{=URL('static','vue/app.js')}}"></script>
+{{end page_js}}

@@ -1,0 +1,12 @@
+#searchbox {
+    display:flex;
+    margin-bottom:30px
+}
+
+#searchbox button {
+    margin-left:5px
+}
+
+.btn {
+    border-radius:0px
+}
