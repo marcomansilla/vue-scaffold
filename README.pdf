@@ -1,0 +1,388 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R /F3 9 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (http://www.vuejs.org)
+>> /Border [ 0 0 0 ] /Rect [ 85.69291 680.7736 111.8129 692.7736 ] /Subtype /Link /Type /Annot
+>>
+endobj
+5 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/axios/axios)
+>> /Border [ 0 0 0 ] /Rect [ 85.69291 662.7736 110.1429 674.7736 ] /Subtype /Link /Type /Annot
+>>
+endobj
+6 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (http://experts4solutions.com/collection2/default/examples)
+>> /Border [ 0 0 0 ] /Rect [ 85.69291 644.7736 129.5929 656.7736 ] /Subtype /Link /Type /Annot
+>>
+endobj
+7 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/web2py/scaffold)
+>> /Border [ 0 0 0 ] /Rect [ 151.6129 629.0236 167.1729 641.0236 ] /Subtype /Link /Type /Annot
+>>
+endobj
+8 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (http://web2py.com)
+>> /Border [ 0 0 0 ] /Rect [ 259.9929 629.0236 294.4529 641.0236 ] /Subtype /Link /Type /Annot
+>>
+endobj
+9 0 obj
+<<
+/BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+10 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R ] /Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 15 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+11 0 obj
+<<
+/Outlines 13 0 R /PageLabels 17 0 R /PageMode /UseNone /Pages 15 0 R /Type /Catalog
+>>
+endobj
+12 0 obj
+<<
+/Author () /CreationDate (D:20171214163613+03'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20171214163613+03'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (Web2Py - VueJS Scaffold Application) /Trapped /False
+>>
+endobj
+13 0 obj
+<<
+/Count 1 /First 14 0 R /Last 14 0 R /Type /Outlines
+>>
+endobj
+14 0 obj
+<<
+/Dest [ 10 0 R /XYZ 62.69291 617.0236 0 ] /Parent 13 0 R /Title (How it works)
+>>
+endobj
+15 0 obj
+<<
+/Count 1 /Kids [ 10 0 R ] /Type /Pages
+>>
+endobj
+16 0 obj
+<<
+/Length 3559
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+BT 1 0 0 1 0 4 Tm 57.12488 0 Td 24 TL /F2 20 Tf 0 0 0 rg (Web2Py - VueJS Scaffold Application) Tj T* -57.12488 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 719.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (This is a small example of integration between VueJS and Web2py.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 701.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (It includes:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 695.0236 cm
+Q
+q
+1 0 0 1 62.69291 695.0236 cm
+Q
+q
+1 0 0 1 62.69291 683.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (vue.js) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 677.0236 cm
+Q
+q
+1 0 0 1 62.69291 665.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Axios) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 659.0236 cm
+Q
+q
+1 0 0 1 62.69291 647.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (APIMaker) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 647.0236 cm
+Q
+q
+1 0 0 1 62.69291 629.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (\(*\)) Tj /F1 10 Tf ( This is based on ) Tj 0 0 .501961 rg (this) Tj 0 0 0 rg ( app from the official ) Tj 0 0 .501961 rg (web2py) Tj 0 0 0 rg ( repo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 596.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (How it works) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 584.0236 cm
+Q
+q
+1 0 0 1 62.69291 584.0236 cm
+Q
+q
+1 0 0 1 62.69291 572.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Clone this repo) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 566.0236 cm
+Q
+q
+1 0 0 1 62.69291 536.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Run web2py shell) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL ($python web2py.py -S vue-scaffold -M) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 530.0236 cm
+Q
+q
+1 0 0 1 62.69291 482.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 33 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 33 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (In the shell populate the table) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (from gluon.contrib.populate import populate) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (populate\(db.doc, 100\)) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 476.0236 cm
+Q
+q
+1 0 0 1 62.69291 446.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Then in your browser open) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (http://127.0.0.1:8000/vue-scaffold) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 446.0236 cm
+Q
+ 
+endstream
+endobj
+17 0 obj
+<<
+/Nums [ 0 18 0 R ]
+>>
+endobj
+18 0 obj
+<<
+/S /D /St 1
+>>
+endobj
+xref
+0 19
+0000000000 65535 f 
+0000000073 00000 n 
+0000000124 00000 n 
+0000000231 00000 n 
+0000000343 00000 n 
+0000000515 00000 n 
+0000000697 00000 n 
+0000000906 00000 n 
+0000001092 00000 n 
+0000001261 00000 n 
+0000001376 00000 n 
+0000001624 00000 n 
+0000001730 00000 n 
+0000002023 00000 n 
+0000002097 00000 n 
+0000002198 00000 n 
+0000002259 00000 n 
+0000005870 00000 n 
+0000005911 00000 n 
+trailer
+<<
+/ID 
+[<4ee49d61014161d3a49f69547f5f5993><4ee49d61014161d3a49f69547f5f5993>]
+% ReportLab generated PDF document -- digest (http://www.reportlab.com)
+
+/Info 12 0 R
+/Root 11 0 R
+/Size 19
+>>
+startxref
+5945
+%%EOF
