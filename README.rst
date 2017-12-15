@@ -30,6 +30,17 @@ How it works
 
   *http://127.0.0.1:8000/vue-scaffold*
 
+TODO
+----
+ 
+- model DONE
+- filter form DONE
+- results display table DONE
+- button to show all records DONE
+- add record
+- edit record
+- delete record
+  
 
 .. _this: https://github.com/web2py/scaffold
 .. _vue.js: http://www.vuejs.org
