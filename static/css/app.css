@@ -29,3 +29,11 @@
 .pgbuttons {
     text-align:right
 }
+
+.modal-header {
+    background-color:#2196F3;
+}
+
+.modal-header h4, .close span {
+    color:#fff
+}

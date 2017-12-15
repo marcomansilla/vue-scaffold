@@ -8,7 +8,7 @@
 	<div id="searchbox">
 	    <input  @keyup="query" placeholder="Search..." class="form-control" type="search" v-model="search" autofocus/>
 	    <button @click="listAll" class="btn btn-primary btn-lg"><i class="fa fa-list"></i> List all</button>
-	    <button class="btn btn-primary btn-lg"><i class="fa fa-plus"> </i> Add record</button>
+	    <button class="btn btn-primary btn-lg" @click="newRecord"><i class="fa fa-plus"> </i> Add record</button>
 	</div>
 	<div id="resultbox">
 	    <div v-if="result.length>0">
@@ -37,7 +37,7 @@
 			    <td>${record.id}</td>
 			    <td>${record.title}</td>
 			    <td>${record.body}</td>
-			    <td><button class="btn btn-primary"><i class="fa fa-pencil"></i></button></td>
+			    <td><button class="btn btn-primary" @click="updateRecord(record.id)"><i class="fa fa-pencil"></i></button></td>
 			    <td><button class="btn btn-danger" @click="deleteRecord(record.id)"><i class="fa fa-trash"></i></button></td>			
 			</tr>
 		    </tbody>
@@ -46,6 +46,10 @@
 	    <div v-else id="noresult"><h3>No results found...</h3></div>
 	</div>
     </div>
+    <!-- modal component -->
+    <modal v-if="modalData.showModal" @close="closeModal">
+	<template slot="title">${modalData.title}</template>
+    </modal>
 </div>
 
 {{block page_js}}
