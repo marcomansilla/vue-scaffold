@@ -1,6 +1,10 @@
 #searchbox {
     display:flex;
-    margin-bottom:30px
+    margin-bottom:30px;
+}
+
+#searchbox #noresult {
+
 }
 
 #searchbox button {
@@ -9,4 +13,19 @@
 
 .btn {
     border-radius:0px
+}
+
+#noresult {
+    text-align:center;
+    padding:2em;
+    color:#d0d0d0;
+    font-style:italic
+}
+
+.counter {
+    padding:5px
+}
+
+.pgbuttons {
+    text-align:right
 }

@@ -11,26 +11,39 @@
 	    <button class="btn btn-primary btn-lg"><i class="fa fa-plus"> </i> Add record</button>
 	</div>
 	<div id="resultbox">
-	    <table class="table table-hover ">
-		<thead>
-		    <tr>
-			<th>ID</th>
-			<th>Title</th>
-			<th>Body</th>
-			<th>Edit</th>
-			<th>Delete</th>
-		    </tr>
-		</thead>
-		<tbody>
-		    <tr v-for="record in result">
-			<td>${record.id}</td>
-			<td>${record.title}</td>
-			<td>${record.body}</td>
-			<td><button class="btn btn-primary"><i class="fa fa-pencil"></i></button></td>
-			<td><button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>			
-		    </tr>
-		</tbody>
-	    </table>
+	    <div v-if="result.length>0">
+		<div class="row">
+		    <div class="col-lg-6">
+			<p class="counter"><strong>Records found:</strong> ${pagination.items}</p>
+		    </div>
+		    <div class="col-lg-6 pgbuttons">
+			    <button class="btn btn-primary " @click="paginator(pagination.prev)" :disabled="pagination.prev.length==0"><i class="fa fa-arrow-left"></i></button>
+			    <button class="btn btn-primary " @click="paginator(pagination.next)" :disabled="pagination.next.length==0"><i class="fa fa-arrow-right"></i></button>
+		    </div>
+		</div>
+		<hr/>
+		<table class="table table-hover ">
+		    <thead>
+			<tr>
+			    <th>ID</th>
+			    <th>Title</th>
+			    <th>Body</th>
+			    <th>Edit</th>
+			    <th>Delete</th>
+			</tr>
+		    </thead>
+		    <tbody>
+			<tr v-for="record in result">
+			    <td>${record.id}</td>
+			    <td>${record.title}</td>
+			    <td>${record.body}</td>
+			    <td><button class="btn btn-primary"><i class="fa fa-pencil"></i></button></td>
+			    <td><button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>			
+			</tr>
+		    </tbody>
+		</table>		
+	    </div>
+	    <div v-else id="noresult"><h3>No results found...</h3></div>
 	</div>
     </div>
 </div>

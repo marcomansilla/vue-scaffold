@@ -10,7 +10,7 @@
 
 
 def index():
-    redirect(URL('static','app/index'))
+    redirect(URL('app','index'))
     return dict()
 
 
