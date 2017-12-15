@@ -11,8 +11,8 @@ var app = new Vue({
 	}
     },
     methods:{
-	getData(url){
-	    axios.get(url)
+	getData(url,foo){
+	    axios[foo](url)
 		    .then((result)=>{
 			this.result=result.data.rows;
 			this.pagination.items=result.data.count;
@@ -33,18 +33,30 @@ var app = new Vue({
 	},
 	query(){
 	    if (this.search.length>0){
-		this.getData(`../services/api/doc/?search=body contains "${this.search}"`);
+		this.getData(`../services/api/doc/?search=body contains "${this.search}"`,'get');
 	    }else{
 		this.result=[];
 	    }
 	
 	},
 	listAll(){
-	    this.getData('../services/api/doc');
+	    this.getData('../services/api/doc','get');
 	},
 	paginator(url){
-	    this.getData(url);
+	    this.getData(url,'get');
+	},
+	deleteRecord(id){
+	    let remove=confirm('Please confirm to delete this item');
+	    if (remove===true){
+		axios.delete(`../services/api/doc/${id}`)
+		    .then((result)=>{
+			console.log(result);
+			this.getData(`../services/api/doc/?search=body contains "${this.search}"`,'get');
+		    })
+		    .catch(error=>console.log(error.data));
+	    }		
 	}
+	
     }
 });
 

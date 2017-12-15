@@ -38,7 +38,7 @@
 			    <td>${record.title}</td>
 			    <td>${record.body}</td>
 			    <td><button class="btn btn-primary"><i class="fa fa-pencil"></i></button></td>
-			    <td><button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>			
+			    <td><button class="btn btn-danger" @click="deleteRecord(record.id)"><i class="fa fa-trash"></i></button></td>			
 			</tr>
 		    </tbody>
 		</table>		

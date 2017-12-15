@@ -39,7 +39,7 @@ TODO
 - button to show all records DONE
 - add record
 - edit record
-- delete record
+- delete record DONE
   
 
 .. _this: https://github.com/web2py/scaffold
