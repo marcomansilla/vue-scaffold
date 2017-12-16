@@ -22,12 +22,12 @@
 		    </div>
 		</div>
 		<hr/>
-		<table class="table table-hover ">
+		<table class="table table-hover ">$
 		    <thead>
 			<tr>
 			    <th>ID</th>
 			    <th>Title</th>
-			    <th>Body</th>
+			    <th>Body</th>$
 			    <th>Edit</th>
 			    <th>Delete</th>
 			</tr>
@@ -49,9 +49,11 @@
     <!-- modal component -->
     <modal v-if="modalData.showModal" @close="closeModal">
 	<template slot="title">${modalData.title}</template>
+	<template slot="body"><recordform></recordform></template>
     </modal>
 </div>
 
 {{block page_js}}
+<script src="{{=URL('static','vue/forms.js')}}"></script>
 <script src="{{=URL('static','vue/app.js')}}"></script>
 {{end page_js}}

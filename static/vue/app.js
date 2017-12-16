@@ -1,23 +1,69 @@
+window.Event = new Vue();
+// Generic form component
 Vue.component('modal',{
     template:`
 <div>
 <!-- Modal -->
-<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display:block">
+<div class="modal bs-example-modal-lg fade in" id="modalComponent" tabindex="-1" role="dialog" aria-labelledby="modalComponentLabel" style="display:block">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button @click="$emit('close')" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"><slot name=title></slot></h4>
+        <h4 class="modal-title" id="modalComponentLabel"><slot name=title></slot></h4>
       </div>
       <div class="modal-body">
-        
+          <slot name="body"></slot>
       </div>
     </div>
   </div>
 </div>
-<div class="modal-backdrop fade in"></div>
+<div class="modal-backdrop fade in" @click="$emit('close')"></div>
 </div>
     `
+});
+
+class TestForm{
+    constructor(data){
+	let originalData=data;
+	for (let field in data){
+	    this[field]=data[field];
+	}
+    }
+
+    displayData(){
+	let data = Object.assign({}, this);
+	delete data.originalData;
+	delete data.errors;
+
+	console.log(data);
+    }
+}
+Vue.component('recordform',{
+    template:`
+<div>
+    <form @submit.prevent="test">
+	<div class="form-group">
+	    <label for="title">Title</label>
+	    <input id="title"  class="form-control" name="" type="text" value=""/>
+	</div>
+
+	<div class="form-group">
+	    <label for="body">Body</label>
+	    <textarea id="body" class="form-control" name="" type="text" value=""/>
+	</div>
+        <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Submit</button>
+        <button class="btn btn-danger"><i class="fa fa-window-close"></i> Cancel</button>
+    </form>
+</div>    
+`,
+    data(){
+	return {
+	    foo: new TestForm(),
+	    param:''
+	};
+    },
+    methods:{
+    }
 });
 
 var app = new Vue({
@@ -78,6 +124,7 @@ var app = new Vue({
 	updateRecord(id){
 	    this.modalData.showModal=true;
 	    this.modalData.title='Edit record';
+	    
 	},
 	deleteRecord(id){
 	    let remove=confirm('Please confirm to delete this item');
