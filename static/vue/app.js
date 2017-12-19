@@ -1,18 +1,19 @@
-window.Event = new Vue();
+window.bus = new Vue();
+
 // Generic form component
 Vue.component('modal',{
     template:`
 <div>
 <!-- Modal -->
-<div class="modal bs-example-modal-lg fade in" id="modalComponent" tabindex="-1" role="dialog" aria-labelledby="modalComponentLabel" style="display:block">
-  <div class="modal-dialog" role="document">
+<div class="modal fade in" id="modalComponent" tabindex="-1" role="dialog" aria-labelledby="modalComponentLabel" style="display:block">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button @click="$emit('close')" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="modalComponentLabel"><slot name=title></slot></h4>
+        <h4 class="modal-title" id="modalComponentLabel"><slot name="title"></slot></h4>
       </div>
       <div class="modal-body">
-          <slot name="body"></slot>
+          <slot name="body"></slot>          
       </div>
     </div>
   </div>
@@ -22,6 +23,7 @@ Vue.component('modal',{
     `
 });
 
+// generic form class
 class TestForm{
     constructor(data){
 	let originalData=data;
@@ -33,36 +35,75 @@ class TestForm{
     displayData(){
 	let data = Object.assign({}, this);
 	delete data.originalData;
-	delete data.errors;
+	delete this.id;
 
 	console.log(data);
     }
 }
+
+// component with form HTML code
 Vue.component('recordform',{
     template:`
 <div>
-    <form @submit.prevent="test">
+    <form @submit.prevent="send()">
 	<div class="form-group">
 	    <label for="title">Title</label>
-	    <input id="title"  class="form-control" name="" type="text" value=""/>
+	    <input id="title"  class="form-control" name="" type="text" v-model="recordData.title"/>
 	</div>
 
 	<div class="form-group">
 	    <label for="body">Body</label>
-	    <textarea id="body" class="form-control" name="" type="text" value=""/>
+	    <textarea id="body" class="form-control" name="" type="text" v-model="recordData.body"/>
 	</div>
         <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Submit</button>
-        <button class="btn btn-danger"><i class="fa fa-window-close"></i> Cancel</button>
     </form>
 </div>    
 `,
     data(){
 	return {
-	    foo: new TestForm(),
-	    param:''
+	    recordData: new TestForm({
+		id:0,
+		title:'',
+		body:''
+	    })	    
 	};
     },
     methods:{
+	record(id){
+	    if (id>0){
+		axios.get(`../services/api/doc/${id}`)
+		    .then((result)=>{
+			console.log(result.data.row);
+			this.recordData.id=result.data.row.id;
+			this.recordData.body=result.data.row.body;
+			this.recordData.title=result.data.row.title;
+			
+		    })
+		    .catch((error)=>console.log(error));
+	    }
+	},
+	send(){
+	    if (this.recordData.id>0){
+		axios.put(`../services/api/doc/${this.recordData.id}`,{
+		    title:this.recordData.title,
+		    body:this.recordData.body
+		})
+		    .then(response=>bus.$emit('submittedForm', response))
+		    .catch(error=>console.log(error));
+	    }else{
+		axios.post(`../services/api/doc`,{
+		    title:this.recordData.title,
+		    body:this.recordData.body
+		})
+		    .then(response=>bus.$emit('submittedForm',response))
+		    .catch(error=>console.log(error));
+	    }
+	}
+    },
+    created(){
+	bus.$on('workData', (data)=>{
+	    this.record(data);
+	});
     }
 });
 
@@ -70,6 +111,7 @@ var app = new Vue({
     delimiters:['${','}'],
     el:'#app',
     data:{
+	message:'',
 	search:'',
 	result:[],
 	pagination:{
@@ -117,14 +159,15 @@ var app = new Vue({
 	paginator(url){
 	    this.getData(url,'get');
 	},
-	newRecord(){
-	    this.modalData.showModal=true;
-	    this.modalData.title='Add new record';
-	},
-	updateRecord(id){
-	    this.modalData.showModal=true;
-	    this.modalData.title='Edit record';
+	manageRecord(id=0){
 	    
+	    if (id>0){
+		this.modalData.title='Edit record';
+	    }else{
+		this.modalData.title='Add new record';
+	    }		
+	    bus.$emit('workData', id);
+	    this.modalData.showModal=true;
 	},
 	deleteRecord(id){
 	    let remove=confirm('Please confirm to delete this item');
@@ -139,6 +182,21 @@ var app = new Vue({
 	},
 	closeModal(){
 	    this.modalData.showModal=false;
+	    this.modalData.title='';
 	}
+    },
+    created(){
+	bus.$on('submittedForm', (data)=>{
+	    this.closeModal();
+	    console.log(data);
+	    this.message='Record succesfully processed';
+	});
     }
 });
+
+
+
+
+
+
+

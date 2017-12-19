@@ -1,6 +1,6 @@
 {{extend 'layout.html'}}
 
-<div class="container" id="app">
+<div class="container">
     <h2>Web2Py - VueJS scaffold minimal demo app</h2>
     <hr/>
     
@@ -8,7 +8,7 @@
 	<div id="searchbox">
 	    <input  @keyup="query" placeholder="Search..." class="form-control" type="search" v-model="search" autofocus/>
 	    <button @click="listAll" class="btn btn-primary btn-lg"><i class="fa fa-list"></i> List all</button>
-	    <button class="btn btn-primary btn-lg" @click="newRecord"><i class="fa fa-plus"> </i> Add record</button>
+	    <button class="btn btn-primary btn-lg" @click="manageRecord(0)"><i class="fa fa-plus"> </i> Add record</button>
 	</div>
 	<div id="resultbox">
 	    <div v-if="result.length>0">
@@ -22,12 +22,12 @@
 		    </div>
 		</div>
 		<hr/>
-		<table class="table table-hover ">$
+		<table class="table table-hover ">
 		    <thead>
 			<tr>
 			    <th>ID</th>
 			    <th>Title</th>
-			    <th>Body</th>$
+			    <th>Body</th>
 			    <th>Edit</th>
 			    <th>Delete</th>
 			</tr>
@@ -37,7 +37,7 @@
 			    <td>${record.id}</td>
 			    <td>${record.title}</td>
 			    <td>${record.body}</td>
-			    <td><button class="btn btn-primary" @click="updateRecord(record.id)"><i class="fa fa-pencil"></i></button></td>
+			    <td><button class="btn btn-primary" @click="manageRecord(record.id)"><i class="fa fa-pencil"></i></button></td>
 			    <td><button class="btn btn-danger" @click="deleteRecord(record.id)"><i class="fa fa-trash"></i></button></td>			
 			</tr>
 		    </tbody>
@@ -47,7 +47,7 @@
 	</div>
     </div>
     <!-- modal component -->
-    <modal v-if="modalData.showModal" @close="closeModal">
+    <modal v-show="modalData.showModal" @close="closeModal">
 	<template slot="title">${modalData.title}</template>
 	<template slot="body"><recordform></recordform></template>
     </modal>

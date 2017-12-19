@@ -37,8 +37,8 @@ TODO
 - filter form DONE
 - results display table DONE
 - button to show all records DONE
-- add record
-- edit record
+- add record DONE
+- edit record DONE
 - delete record DONE
   
 
