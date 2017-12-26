@@ -30,6 +30,11 @@ How it works
 
   *http://127.0.0.1:8000/vue-scaffold*
 
+Testing Stuff
+-------------
+
+Adding for testing pourpuses upload forms, single and multiple with and without the API
+
 TODO
 ----
  
@@ -40,7 +45,9 @@ TODO
 - add record DONE
 - edit record DONE
 - delete record DONE
-  
+- Simple upload
+- Multiple uploads
+
 
 .. _this: https://github.com/web2py/scaffold
 .. _vue.js: http://www.vuejs.org

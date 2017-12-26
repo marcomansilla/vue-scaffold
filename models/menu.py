@@ -29,7 +29,9 @@ response.google_analytics_id = None
 # ----------------------------------------------------------------------------------------------------------------------
 
 response.menu = [
-    (T('Home'), False, URL('app', 'index'), [])
+    (T('Home'), False, URL('app', 'index'), []),
+    (T('Simple Upload'), False, URL('app', 'upload'), []),
+    (T('Multiple Uploads'), False, URL('app', 'uploads'), [])
 ]
 
 DEVELOPMENT_MENU = False
