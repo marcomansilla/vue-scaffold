@@ -1,0 +1,32 @@
+{{extend 'layout.html'}}
+
+<h2>Single file upload demo</h2>
+
+<div class="container-fluid">
+    <div class="well">
+	<h3>Simple file upload API-less</h3>
+	{{=form}}
+    </div>
+    <hr/>
+    <div class="well" id="upload">
+	<h3>Simple file upload WITH API</h3>
+	<form action="" class="form" enctype="multipart/form-data" method="post">
+	    <div class="form-group">
+		<label for="">Name</label>
+		<input class="form-control" name="" type="text" value="" v-model="form.name" />
+	    </div>
+	    <div class="form-group">
+		<label for="">File</label>
+		<input class="form-control" id="imagex" name="" type="file" value="" multiple="" @change="processImg($event)" />
+	    </div>
+	</form>
+
+	<div id="preview">
+	</div>
+    </div>
+</div>
+
+
+{{block page_js}}
+<script src="{{=URL('static','vue/upload.js')}}"></script>
+{{end page_js}}

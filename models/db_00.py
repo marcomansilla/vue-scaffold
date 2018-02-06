@@ -7,10 +7,10 @@ db.define_table('doc',
 
 db.define_table('simpleupload',
                 Field('name'),
-                Field('file', 'upload')
+                Field('filename', 'upload')
 )
 
 db.define_table('multipleuploads',
                 Field('groupname', label='Group Name'),
-                Field('files', 'upload')
+                Field('filelist', 'upload')
 )
