@@ -43,8 +43,3 @@ def api2():
     def DELETE(table_name,record_id):
         return db(db[table_name]._id==record_id).delete()
     return dict(GET=GET, POST=POST, PUT=PUT, DELETE=DELETE)
-
-def subir():
-
-    response.js=jQuery('console.log('+request.vars+') ')
-    return dict()

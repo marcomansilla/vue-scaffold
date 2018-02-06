@@ -3,6 +3,7 @@ var upload=new Vue({
     el:'#upload',
     data:{
 	files:'',
+	subidas:[],
 	images:[],
 	imagen:'',
 	form:{
@@ -13,35 +14,46 @@ var upload=new Vue({
     methods:{
 	postData(url, values){
 	    axios.post(url,values)
-		.then((response)=>{console.log('file uploaded');
-				   console.log('Success!!');})
-		.catch((error)=>{console.log(error);});
+		.then((response)=>{
+		    console.log('file uploaded');
+		    this.subidas.push=response.data.row.id;
+		})
+		.catch((error)=>{
+		    console.log(error);
+		});
 	    console.log('posting data');
 	},
+	
 	processImg(e){
+	    // get images
+	    this.subidas=[];
 	    console.log('Processing img...');
 	    this.imagen=e.target.files;
-	    let img=e.target.files;
-	    // var imgBlob=this.encodeBlob(img[0]);
-	    this.encodeBlob(img[0]);
-
+	    var images=e.target.files;
 	    
+	    // encode and post
+	    if (images.length>1){
+		for (i=0;i<images.length;i++){
+		    this.encondeImg(images[i]);
+		    console.log(this.subidas);
+		}
+	    }else{
+		this.encondeImg(images[0]);
+	    }
+	    console.log(this.subidas);
 	},
-	encodeBlob(file) {
+
+	encondeImg(file){
 	    var reader = new FileReader();
-	    var fileBlob='';
 	    reader.readAsDataURL(file);
-	    console.log('encoding');
+	    console.log('encoding...');
 	    reader.onload = (file)=> {
-		console.log(reader.result);
-		this.postData('../services/api2/simpleupload.json', {name:'some ugly ass name', filename:reader.result});
+		this.postData('../services/api/simpleupload', {name:file.name, filename:reader.result});
 	    };
 
 	    reader.onerror = (error)=> {
 		console.log('Error: ', error);
-	    };
-	    
+	    };	       
 	}
-
     }
 });
