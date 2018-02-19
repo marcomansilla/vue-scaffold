@@ -6,7 +6,7 @@
 	{{for image in simple:}}
 	<div class="col-sm-2">
 	    <p>{{=image.name}}</p>
-	    <img alt="" src="{{=image.filename}}" class="img-responsive" style="max-height:150px"/>
+	    <img alt="" src="{{=URL('default','download', args=image.filename)}}" class="img-responsive" style="max-height:150px"/>
 	</div>
 	{{pass}}
     </div>
