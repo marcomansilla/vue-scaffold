@@ -132,16 +132,9 @@ var app = new Vue({
 		    this.pagination.items=result.data.count;
 		    this.pagination.next=result.data.next;
 		    console.log(result.data);
-		    if (result.data.previous) {
-			this.pagination.prev=result.data.previous;
-		    }else{
-			this.pagination.prev='';
-		    }
-		    if (result.data.next) {
-			this.pagination.next=result.data.next;
-		    }else{
-			this.pagination.next='';
-		    }
+		    
+		    this.pagination.prev=result.data.previous || null;
+		    this.pagination.next=result.data.next || null;
 		})
 		.catch(error=>console.log(error));
 	},
