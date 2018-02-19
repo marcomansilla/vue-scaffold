@@ -33,7 +33,7 @@ How it works
 Testing Stuff
 -------------
 
-Adding for testing pourpuses upload forms, single and multiple with and without the API
+Adding for testing pourpuses upload forms, single and multiple with API
 
 TODO
 ----
@@ -45,8 +45,8 @@ TODO
 - add record DONE
 - edit record DONE
 - delete record DONE
-- Simple upload
-- Multiple uploads
+- Simple upload DONE
+- Multiple uploads DONE (it should need the multiple option enabled in input file tag, and count number of items in script before upload)
 
 
 .. _this: https://github.com/web2py/scaffold
